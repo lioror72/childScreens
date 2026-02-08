@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginTop: 6,
     marginBottom: 14,
+    alignItems: "center",
   },
 
   circleBtn: {
@@ -36,6 +37,8 @@ export const styles = StyleSheet.create({
     fontSize: 64,
     color: "#ffffff",
     lineHeight: 64,
+    includeFontPadding: false,
+    textAlignVertical: "center",
   },
 
   hello: {
@@ -44,16 +47,19 @@ export const styles = StyleSheet.create({
     marginBottom: 14,
     textAlign: "center",
     writingDirection: "rtl",
+    includeFontPadding: false,
+    textAlignVertical: "center",
   },
 
   chipsRow: {
     flexDirection: "row",
+    alignItems: "center", // ✅ חשוב לשורה
     marginBottom: 12,
   },
 
   chip: {
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: "center",     // ✅ כבר היה נכון
     justifyContent: "center",
     paddingVertical: 10,
     paddingHorizontal: 16,
@@ -61,10 +67,15 @@ export const styles = StyleSheet.create({
   },
 
   chipText: {
-    lineHeight: 18,
+    fontSize: 16,
+    lineHeight: 20,           // ✅ תואם יותר לפונט
     marginHorizontal: 6,
     textAlign: "center",
     writingDirection: "rtl",
+
+    // ✅ אנדרואיד: מונע “ישיבה נמוכה” של הטקסט
+    includeFontPadding: false,
+    textAlignVertical: "center",
   },
 
   chipBlue: {
@@ -79,6 +90,7 @@ export const styles = StyleSheet.create({
   chipMint: {
     backgroundColor: "#dcfce7",
     marginBottom: 14,
+    alignSelf: "center",
   },
 
   timer: {
@@ -100,12 +112,16 @@ export const styles = StyleSheet.create({
     marginLeft: 8,
     textAlign: "center",
     writingDirection: "rtl",
+    includeFontPadding: false,
+    textAlignVertical: "center",
   },
 
   timerValue: {
     fontSize: 56,
     color: "#f97316",
     textAlign: "center",
+    includeFontPadding: false,
+    textAlignVertical: "center",
   },
 
   timerSub: {
@@ -113,6 +129,8 @@ export const styles = StyleSheet.create({
     marginTop: 6,
     textAlign: "center",
     writingDirection: "rtl",
+    includeFontPadding: false,
+    textAlignVertical: "center",
   },
 
   grid: {
@@ -146,6 +164,8 @@ export const styles = StyleSheet.create({
     color: "#475569",
     textAlign: "center",
     writingDirection: "rtl",
+    includeFontPadding: false,
+    textAlignVertical: "center",
   },
 
   panicBtn: {
@@ -172,5 +192,7 @@ export const styles = StyleSheet.create({
     lineHeight: 22,
     textAlign: "center",
     writingDirection: "rtl",
+    includeFontPadding: false,
+    textAlignVertical: "center",
   },
 });
